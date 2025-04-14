@@ -22,5 +22,18 @@ Passcode: 294658
 - Practical Exam	practical exam	1:	30.0%
 - Final exam		final exam	1:	30.0%
 
+5. Tools:
+- JDK 8 : https://www.oracle.com/java/technologies/javase/javase8-archive-downloads.html
+- Netbeans 8.2 : https://taimienphi.vn/download-netbean-ide-5221/8.2-phien-ban
++ Support: https://www.ultraviewer.net/vi/download.html
++ LMS (làm bài Quizz/Workshop/Assignment):
+	ID: CSD201LNT / CSD201LNT@2025
++ Edunext (Shcedule / Disscussion)
+	https://fu-edunext.fpt.edu.vn/
 
+6. Download slides: https://flm.fpt.edu.vn/ => CSD201
 
+7. Ôn tập:
+- Ôn tập cấu trúc dữ liệu Java: https://www.youtube.com/playlist?list=PLyxSzL3F7485VPUEB_swqv4bvc0XX-7BW
+- Ôn tập thuật sắp xếp và tìm kiếm: https://www.youtube.com/playlist?list=PLyxSzL3F74875OpDlkUfsRRUktZMGkhJU
+- Ôn tập lý thuyết đồ thị: https://www.youtube.com/playlist?list=PLyxSzL3F74861bFHKlk9dOBCqMIH8EV0Q
