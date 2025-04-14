@@ -18,7 +18,7 @@ public class Slot02_a {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        List<Integer> list1 = new ArrayList<Integer>();
+        ArrayList<Integer> list1 = new ArrayList<Integer>();
         list1.add(5);
         list1.add(10);
         for (int i = 0; i < 100000; i++) {
@@ -31,6 +31,8 @@ public class Slot02_a {
         list1.remove(0);
         
         list1.remove(list1.size()-1);
+        
+        // list1....
 
         System.out.println("Số lượng: "+ list1.size());
     }
