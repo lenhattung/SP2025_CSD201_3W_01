@@ -28,6 +28,8 @@ public class Slot02_a {
             System.out.println(list1.get(i));
         }
         
+        list1.remove(0);
+        
         list1.remove(list1.size()-1);
 
         System.out.println("Số lượng: "+ list1.size());
