@@ -8,3 +8,19 @@ Passcode: 294658
 - ThS. Lê Nhật Tùng (TITV)
 - Email: lenhattung@gmail.com
 - https://www.youtube.com/@TITVvn
+
+4. Đánh giá môn học:
++ Progress test (PT)	quiz	2:	20.0%
+- 15 slot đầu => quiz 1, chuyên cần * 70% + 30% trắc nghiệm
+- 15 slot sau => quiz 2, chuyên cần * 70% + 30% trắc nghiệm
+- Cách tính điểm chuyên cần => Vắng 1 slot: trừ 1 điểm.
+
++ Assignment (AS)	on-going	2:	20.0%
+- Assignment 1 = 3 đề (cộng lại chia 3)
+- Assignment 2 = 3 đề (công lại chia 3)
+
+- Practical Exam	practical exam	1:	30.0%
+- Final exam		final exam	1:	30.0%
+
+
+
