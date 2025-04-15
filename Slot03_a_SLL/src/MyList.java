@@ -138,7 +138,9 @@ public class MyList {
         this.traverse();
         //------------------------------------------------------------------------------------
         //------ Start your code here---------------------------------------------------------
-
+        if (head != null) {
+            head = head.next;
+        }
         //------ End your code here-----------------------------------------------------------
         System.out.print("After:    ");
         this.traverse();
@@ -149,7 +151,20 @@ public class MyList {
         System.out.print("Before:   ");
         this.traverse();
         //------ Start your code here---------------------------------------------------------
-
+        if (head != null) {
+            // If there is only one element
+            if (head.next == null) {
+                head = null;
+            } else {
+                // find the second last node
+                Node secondLast = head;
+                while (secondLast.next.next != null) {
+                    secondLast = secondLast.next;
+                }
+                // remove last node
+                secondLast.next = null;
+            }
+        }
         //------ End your code here-----------------------------------------------------------
         System.out.print("After:    ");
         this.traverse();

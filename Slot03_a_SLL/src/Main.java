@@ -39,10 +39,10 @@ public class Main {
                 t.f3();
                 break;
             case 4:
-//                t.f4();
+                t.f4();
                 break;
             case 5:
-//                t.f5();
+                t.f5();
                 break;
 
             default:
