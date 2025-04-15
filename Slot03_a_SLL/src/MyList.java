@@ -113,20 +113,19 @@ public class MyList {
         // Special case for head
         if (k == 0) {
             addFirst(value);
+        } else {
+            // Find the node at position k-1
+            Node curent = head;
+            int currentIndex = 0;
+            while (currentIndex < k - 1 && curent != null) {
+                curent = curent.next;
+                currentIndex++;
+            }
+            // Insert the new node
+            Node newNode = new Node(value);
+            newNode.next = curent.next;
+            curent.next = newNode;
         }
-
-        // Find the node at position k-1
-        Node curent = head;
-        int currentIndex = 0;
-        while (currentIndex < k - 1 && curent != null) {
-            curent = curent.next;
-            currentIndex++;
-        }
-        // Insert the new node
-        Node newNode = new Node(value);
-        newNode.next = curent.next;
-        curent.next = newNode;
-
         //------ End your code here-----------------------------------------------------------
         System.out.println("After: ");
         this.traverse();
