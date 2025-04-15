@@ -156,6 +156,7 @@ public class MyList {
             if (head.next == null) {
                 head = null;
             } else {
+                // size > 1
                 // find the second last node
                 Node secondLast = head;
                 while (secondLast.next.next != null) {
