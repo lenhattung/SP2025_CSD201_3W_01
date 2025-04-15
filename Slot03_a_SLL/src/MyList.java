@@ -105,20 +105,20 @@ public class MyList {
         this.traverse();
         //------ Start your code here---------------------------------------------------------
         Scanner sc = new Scanner(System.in);
-        System.out.print("Enter a value to add at the end:");
+        System.out.print("Enter a value:");
         int value = sc.nextInt();
         System.out.println("Enter position k (0-based index): ");
         int k = sc.nextInt();
-        
+
         // Special case for head
-        if(k==0){
+        if (k == 0) {
             addFirst(value);
         }
-        
+
         // Find the node at position k-1
         Node curent = head;
         int currentIndex = 0;
-        while(currentIndex<k-1 && curent!=null){
+        while (currentIndex < k - 1 && curent != null) {
             curent = curent.next;
             currentIndex++;
         }
@@ -126,9 +126,33 @@ public class MyList {
         Node newNode = new Node(value);
         newNode.next = curent.next;
         curent.next = newNode;
-        
+
         //------ End your code here-----------------------------------------------------------
         System.out.println("After: ");
+        this.traverse();
+
+    }
+
+    // f4: removeFirst
+    void f4() {
+        System.out.print("Before:   ");
+        this.traverse();
+        //------------------------------------------------------------------------------------
+        //------ Start your code here---------------------------------------------------------
+
+        //------ End your code here-----------------------------------------------------------
+        System.out.print("After:    ");
+        this.traverse();
+    }
+
+    // f5: removeLast
+    void f5() throws Exception {
+        System.out.print("Before:   ");
+        this.traverse();
+        //------ Start your code here---------------------------------------------------------
+
+        //------ End your code here-----------------------------------------------------------
+        System.out.print("After:    ");
         this.traverse();
     }
 }
