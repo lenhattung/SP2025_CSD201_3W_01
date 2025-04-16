@@ -141,17 +141,17 @@ public class MyList {
         int value = sc.nextInt();
         System.out.print("Enter position to add (0 to " + size + "): ");
         int k = sc.nextInt();
-        
-        if(k==0){
+
+        if (k == 0) {
             addFirst(value);
-        }else if(k==size){
+        } else if (k == size) {
             addLast(value);
-        }else {
+        } else {
             Node newNode = new Node(value);
             Node p = head;
             // Traverse to the node before position k
-            for (int i = 0; i < k-1; i++) {
-                p=p.next;
+            for (int i = 0; i < k - 1; i++) {
+                p = p.next;
             }
             // Insert the new node
             newNode.next = p.next;
@@ -177,9 +177,9 @@ public class MyList {
 
         //------------------------------------------------------------------------------------
         //------ Start your code here---------------------------------------------------------
-        if(!isEmpty()){
+        if (!isEmpty()) {
             head = head.next;
-            if (head == null){
+            if (head == null) {
                 tail = null;
             }
             size--;
@@ -202,7 +202,21 @@ public class MyList {
         RandomAccessFile f = new RandomAccessFile(fname, "rw");
         //------------------------------------------------------------------------------------
         //------ Start your code here---------------------------------------------------------
-        
+        if (!isEmpty()) {
+            if (size == 1) {
+                head = tail = null;
+                size = 0;
+            } else {
+                Node p = head;
+                // find the node before the tail
+                for (int i = 0; i < size - 1; i++) {
+                    p = p.next;
+                }
+                p.next = null;
+                tail = p;
+                size--;
+            }
+        }
         //------ End your code here-----------------------------------------------------------
         //------------------------------------------------------------------------------------
         ftraverse(f);
