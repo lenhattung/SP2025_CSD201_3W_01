@@ -1,4 +1,5 @@
 
+import java.io.File;
 import java.io.RandomAccessFile;
 
 /*
@@ -23,6 +24,12 @@ public class MyList {
 
     public boolean isEmpty() {
         return this.size == 0;
+    }
+
+    public void clear() {
+        this.head = null;
+        this.tail = null;
+        this.size = 0;
     }
 
     void traverse() {
@@ -72,10 +79,100 @@ public class MyList {
         if (head == null) {
             head = tail = newNode;
         } else {
-           tail.next = newNode;
-           tail = tail.next;
+            tail.next = newNode;
+            tail = tail.next;
         }
         size++;
         //----------------------------------------------------
+    }
+
+    // f1: ham nay se goi ham addLast nhieu lan
+    void f1() throws Exception {
+        clear();
+        loadData(0);
+        String fname = "f1.txt";
+        File g123 = new File(fname);
+        if (g123.exists()) {
+            g123.delete();
+        }
+        RandomAccessFile f = new RandomAccessFile(fname, "rw");
+        ftraverse(f);
+        f.close();
+    }
+
+    // f2: ham addFirst ==> du lieu nhap tu ban phim
+    void f2() throws Exception {
+        clear();
+        loadData(0);
+        String fname = "f2.txt";
+        File g123 = new File(fname);
+        if (g123.exists()) {
+            g123.delete();
+        }
+        RandomAccessFile f = new RandomAccessFile(fname, "rw");
+        //------------------------------------------------------------------------------------
+        //------ Start your code here---------------------------------------------------------
+
+        //------ End your code here-----------------------------------------------------------
+        //------------------------------------------------------------------------------------
+        ftraverse(f);
+        f.close();
+    }
+
+    // f3: ham addPos ==> them node vao vi tri thu k, trong do node moi va chi so k duoc nhap tu ban phim
+    void f3() throws Exception {
+        clear();
+        loadData(0);
+        String fname = "f3.txt";
+        File g123 = new File(fname);
+        if (g123.exists()) {
+            g123.delete();
+        }
+        RandomAccessFile f = new RandomAccessFile(fname, "rw");
+
+        //------------------------------------------------------------------------------------
+        //------ Start your code here---------------------------------------------------------
+        //------ End your code here-----------------------------------------------------------
+        //------------------------------------------------------------------------------------
+        ftraverse(f);
+        f.close();
+    }
+
+    // f4: removeFirst
+    void f4() throws Exception {
+        clear();
+        loadData(0);
+        String fname = "f4.txt";
+        File g123 = new File(fname);
+        if (g123.exists()) {
+            g123.delete();
+        }
+        RandomAccessFile f = new RandomAccessFile(fname, "rw");
+
+        //------------------------------------------------------------------------------------
+        //------ Start your code here---------------------------------------------------------
+        //------ End your code here-----------------------------------------------------------
+        //------------------------------------------------------------------------------------
+        ftraverse(f);
+        f.close();
+    }
+
+    // f5: removeLast
+    void f5() throws Exception {
+        clear();
+        loadData(0);
+        String fname = "f5.txt";
+        File g123 = new File(fname);
+        if (g123.exists()) {
+            g123.delete();
+        }
+        RandomAccessFile f = new RandomAccessFile(fname, "rw");
+        //------------------------------------------------------------------------------------
+        //------ Start your code here---------------------------------------------------------
+
+        //------ End your code here-----------------------------------------------------------
+        //------------------------------------------------------------------------------------
+        ftraverse(f);
+        f.close();
     }
 }
