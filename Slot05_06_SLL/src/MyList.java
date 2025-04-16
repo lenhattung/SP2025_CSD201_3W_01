@@ -6,7 +6,6 @@ import java.io.RandomAccessFile;
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 /**
  *
  * @author tungi
@@ -42,21 +41,41 @@ public class MyList {
         }
         f.writeBytes("\r\n");
     }
-    
-    void loadData(int k){ // k: là dòng thứ k trong file
+
+    void loadData(int k) { // k: là dòng thứ k trong file
         String[] a = Lib.readLineToStrArray("data.txt", k);
         int n = a.length;
         for (int i = 0; i < n; i++) {
             int number = Integer.parseInt(a[i]);
-            // addLast
+            addLast(number);
         }
     }
-    
-    void addFirst(int n){
-        
+
+    void addFirst(int n) {
+        //------ Start your code here---------------------------------------------------------
+        Node newNode = new Node(n);
+        if (head == null) {
+//            head = newNode;
+//            tail = newNode;
+            head = tail = newNode;
+        } else {
+            newNode.next = head;
+            head = newNode;
+        }
+        size++;
+        //------------------------------------------------------------------------------------
     }
-    
-    void addLast(int n){
-        
+
+    void addLast(int n) {
+        //------ Start your code here---------------------------------------------------------
+        Node newNode = new Node(n);
+        if (head == null) {
+            head = tail = newNode;
+        } else {
+           tail.next = newNode;
+           tail = tail.next;
+        }
+        size++;
+        //----------------------------------------------------
     }
 }
