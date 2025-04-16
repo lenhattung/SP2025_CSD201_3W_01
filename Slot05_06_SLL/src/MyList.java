@@ -51,4 +51,12 @@ public class MyList {
             // addLast
         }
     }
+    
+    void addFirst(int n){
+        
+    }
+    
+    void addLast(int n){
+        
+    }
 }
