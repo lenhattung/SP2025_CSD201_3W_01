@@ -136,8 +136,28 @@ public class MyList {
 
         //------------------------------------------------------------------------------------
         //------ Start your code here---------------------------------------------------------
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter a value to add: ");
+        int value = sc.nextInt();
+        System.out.print("Enter position to add (0 to " + size + "): ");
+        int k = sc.nextInt();
         
-        
+        if(k==0){
+            addFirst(value);
+        }else if(k==size){
+            addLast(value);
+        }else {
+            Node newNode = new Node(value);
+            Node p = head;
+            // Traverse to the node before position k
+            for (int i = 0; i < k-1; i++) {
+                p=p.next;
+            }
+            // Insert the new node
+            newNode.next = p.next;
+            p.next = newNode;
+            size++;
+        }
         //------ End your code here-----------------------------------------------------------
         //------------------------------------------------------------------------------------
         ftraverse(f);
