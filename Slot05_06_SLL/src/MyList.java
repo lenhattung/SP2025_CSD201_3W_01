@@ -209,11 +209,11 @@ public class MyList {
             } else {
                 Node p = head;
                 // find the node before the tail
-                for (int i = 0; i < size - 1; i++) {
+                for (int i = 0; i < size - 2; i++) {
                     p = p.next;
                 }
-                p.next = null;
                 tail = p;
+                p.next = null;
                 size--;
             }
         }
