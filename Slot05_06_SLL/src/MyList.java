@@ -1,6 +1,7 @@
 
 import java.io.File;
 import java.io.RandomAccessFile;
+import java.util.Scanner;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -112,7 +113,10 @@ public class MyList {
         RandomAccessFile f = new RandomAccessFile(fname, "rw");
         //------------------------------------------------------------------------------------
         //------ Start your code here---------------------------------------------------------
-
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter a value: ");
+        int value = sc.nextInt();
+        addFirst(value);
         //------ End your code here-----------------------------------------------------------
         //------------------------------------------------------------------------------------
         ftraverse(f);
@@ -132,6 +136,8 @@ public class MyList {
 
         //------------------------------------------------------------------------------------
         //------ Start your code here---------------------------------------------------------
+        
+        
         //------ End your code here-----------------------------------------------------------
         //------------------------------------------------------------------------------------
         ftraverse(f);
