@@ -39,7 +39,6 @@ public class MyList {
         int n = a.length;
         for (int i = 0; i < n; i++) {
             int p = Integer.parseInt(b[i]);
-
             addLast(a[i], p);
         }
     }
@@ -47,7 +46,16 @@ public class MyList {
     void addFirst(String n, int p) {
         //------------------------------------------------------------------------------------
         //------ Start your code here---------------------------------------------------------
+        Phone newPhone = new Phone(n, p);
+        Node newNode = new Node(newPhone);
 
+        if (isEmpty()) {
+            head = tail = newNode;
+        } else {
+            newNode.next = head;
+            head = newNode;
+        }
+        size++;
         //------ End your code here-----------------------------------------------------------
         //------------------------------------------------------------------------------------
     }
@@ -55,7 +63,28 @@ public class MyList {
     void addLast(String n, int p) {
         //------------------------------------------------------------------------------------
         //------ Start your code here---------------------------------------------------------
+        Phone newPhone = new Phone(n, p);
+        Node newNode = new Node(newPhone);
 
+        if (isEmpty()) {
+            head = tail = newNode;
+        }else{
+            tail.next = newNode;
+            tail = tail.next;
+        }
+        size++;
+        // Giải sử không có tail + size
+        /*
+        if(isEmpty()){
+            head = newNode;
+        }else{
+            Node p1 = head;
+            while(p1.next!=null){
+                p1 = p1.next;
+            }
+            p1.next = newNode;
+        }
+        */    
         //------ End your code here-----------------------------------------------------------
         //------------------------------------------------------------------------------------
     }
