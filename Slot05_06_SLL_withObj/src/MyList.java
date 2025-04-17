@@ -116,7 +116,12 @@ public class MyList {
         ftraverse(f);
         //------------------------------------------------------------------------------------
         //------ Start your code here---------------------------------------------------------
-
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter value n:");
+        String n=sc.nextLine();
+        System.out.println("Enter value p:");
+        int p = sc.nextInt();
+        addFirst(n, p);
         //------ End your code here-----------------------------------------------------------
         //------------------------------------------------------------------------------------
         ftraverse(f);
@@ -134,12 +139,17 @@ public class MyList {
         }
         RandomAccessFile f = new RandomAccessFile(fname, "rw");
         ftraverse(f);
+        int sum = 0;
         //------------------------------------------------------------------------------------
         //------ Start your code here---------------------------------------------------------
-
+        Node p = head;
+        while(p!=null){
+            sum+=p.info.price;
+            p = p.next;
+        }
         //------ End your code here-----------------------------------------------------------
         //------------------------------------------------------------------------------------
-        ftraverse(f);
+        f.writeBytes("SUM:" + sum+"\r\n");
         f.close();
     }
 
