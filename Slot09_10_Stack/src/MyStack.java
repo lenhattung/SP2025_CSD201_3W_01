@@ -3,6 +3,9 @@ public class MyStack {
 
     Node top;
 
+    public MyStack() {
+    }
+
     public MyStack(Node top) {
         this.top = top;
     }
@@ -56,4 +59,22 @@ public class MyStack {
             return -1;
         }
     }
+
+    // display all
+    public void display() {
+        if (!isEmpty()) {
+            Node current = top;
+            System.out.print("Stack elements: ");
+            while (current != null) {
+                System.out.print(current.info + " ");
+                current = current.next;
+            }
+            System.out.println("");
+        } else {
+            System.out.println("Stack is empty");
+        }
+        
+        
+    }
+
 }
