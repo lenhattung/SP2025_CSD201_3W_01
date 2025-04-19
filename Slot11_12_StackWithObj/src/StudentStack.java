@@ -78,11 +78,40 @@ public class StudentStack {
 
     // f2: Add a new student from console input
     void f2() throws Exception {
+        clear();
+        loadData(0);
+        String fname = "f2.txt";
+        File g123 = new File(fname);
+        if (g123.exists()) {
+            g123.delete();
+        }
+        RandomAccessFile f = new RandomAccessFile(fname, "rw");
+        ftraverse(f);
+        //------
 
+        //------
+        ftraverse(f);
+        f.close();
     }
 
-    // f3: Calculate average GPA of all students
+    // f3: Calculate average GPA of all students (using pop)
     void f3() throws Exception {
+        clear();
+        loadData(0);
+        String fname = "f3.txt";
+        File g123 = new File(fname);
+        if (g123.exists()) {
+            g123.delete();
+        }
+        RandomAccessFile f = new RandomAccessFile(fname, "rw");
+        ftraverse(f);
+        double average = 0;
+        //---------
+
+        //---------
+        f.writeBytes("Average GPA: " + average + "\r\n");
+        f.close();
 
     }
+
 }
