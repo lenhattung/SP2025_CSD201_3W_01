@@ -1,6 +1,7 @@
 
 import java.io.File;
 import java.io.RandomAccessFile;
+import java.util.Scanner;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -51,15 +52,34 @@ public class StudentStack {
     }
 
     public void push(String id, String name, int age, double gpa) {
+        Student newStudent = new Student(id, name, age, gpa);
+        Node newNode = new Node(newStudent);
 
+        if (isEmpty()) {
+            top = newNode;
+        } else {
+            newNode.next = top;
+            top = newNode;
+        }
     }
 
     public Student pop() {
-        return null;
+        if (isEmpty()) {
+            return null;
+        } else {
+            Student student = top.info;
+            top = top.next;
+            return student;
+        }
     }
 
     public Student peek() {
-        return null;
+        if (isEmpty()) {
+            return null;
+        } else {
+            Student student = top.info;
+            return student;
+        }
     }
 
     // f1: Load data from file and display all students
@@ -88,7 +108,16 @@ public class StudentStack {
         RandomAccessFile f = new RandomAccessFile(fname, "rw");
         ftraverse(f);
         //------
-
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter student ID");
+        String id = sc.nextLine();
+        System.out.println("Enter student name");
+        String name = sc.nextLine();
+        System.out.println("Enter age");
+        int age = sc.nextInt();
+        System.out.println("Enter gpa");
+        double gpa = sc.nextDouble();
+        push(id, name, age, gpa);
         //------
         ftraverse(f);
         f.close();
@@ -107,7 +136,16 @@ public class StudentStack {
         ftraverse(f);
         double average = 0;
         //---------
-
+        int count = 0;
+        double sum = 0;
+        StudentStack s_tack = this;
+        while(!s_tack.isEmpty()){
+            Student st = s_tack.pop();
+            sum+=st.getGpa();
+            count++;
+        }
+        count=(count==0)?1:count;
+        average = sum/count;
         //---------
         f.writeBytes("Average GPA: " + average + "\r\n");
         f.close();
