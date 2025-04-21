@@ -16,23 +16,23 @@ public class MyQueue {
         this.head = this.tail = null;
     }
 
-    public boolean isEmpty(){
-        return this.head==null;
+    public boolean isEmpty() {
+        return this.head == null;
     }
-    
-    public void enqueue(String id, String name, int age, double gpa){
-        
+
+    public void enqueue(String id, String name, int age, double gpa) {
+
     }
-    
-    public Student dequeue(){
-        
+
+    public Student dequeue() {
+
     }
-    
-    public Student front(){
-        
+
+    public Student front() {
+
     }
-    
-    public void display(){
-       
+
+    public void display() {
+
     }
 }
