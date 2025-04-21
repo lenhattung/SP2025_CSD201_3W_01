@@ -9,15 +9,15 @@
  * @author tungi
  */
 public class Node {
-    int info;
+    Student info;
     Node next;
 
-    public Node(int info, Node next) {
+    public Node(Student info, Node next) {
         this.info = info;
         this.next = next;
     }
 
-    public Node(int info) {
+    public Node(Student info) {
         this.info = info;
     }
     
