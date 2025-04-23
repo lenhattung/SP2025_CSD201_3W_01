@@ -83,43 +83,80 @@ public class MyTree {
         }
     }
 
+    private int maxLevel(Node p) {
+        if (p == null) {
+            return 0;
+        }
+        int maxLeftLevel = maxLevel(p.left);
+        int maxRightLevel = maxLevel(p.right);
+
+        return Math.max(maxLeftLevel, maxLeftLevel) + 1;
+    }
+
     // 1. Test f1 - compute height
     public int f1() {
-        return 0;
+        return maxLevel(root) - 1;
+    }
+
+    private int countNodes(Node p) {
+        if (p == null) {
+            return 0;
+        }
+        return 1 + countNodes(p.left) + countNodes(p.right);
+        //Chỉ đếm > 5;
+        //int x = ((p.info>5)?1:0);
+        //return x + countNodes(p.left) + countNodes(p.right);
     }
 
     // 2. Test f2 - count nodes
     public int f2() {
-        return 0;
+        return countNodes(root);
+    }
+
+    private int countLeafNodes(Node p) {
+        if (p == null) {
+            return 0;
+        }
+        int x = (p.left==null && p.right==null)?1:0;
+        return x + countLeafNodes(p.left) + countLeafNodes(p.right);
     }
 
     // 3. Test f3 - count leaf nodes
     public int f3() {
-        return 0;
+        return countLeafNodes(root);
     }
 
+    private int sum(Node p){
+        if(p==null){
+            return 0;
+        }
+        return p.info + sum(p.left) + sum(p.right);
+        // Tinh tong > 5
+        // int x = (p.info>5)?p.info:0;
+        // return x + sum(p.left) + sum(p.right);
+    }
     // 4. Test f4 - compute sum of nodes 
     public int f4() {
-        return 0;
+        return sum(root);
     }
 
     // 5. Test f5 - Pre-Order 
     public void f5() {
-
+        preOrder(root);
     }
 
     // 6. Test f6 - In-Order
     public void f6() {
-
+        inOrder(root);
     }
 
     // 7. Test f7 - Post-Order
     public void f7() {
-
+        postOrder(root);
     }
 
     // 8. Test f8 - Search
     int f8(int n) {
-        return 0;
+         return search(root, n);
     }
 }
