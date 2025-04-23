@@ -7,6 +7,18 @@ public class MyTree {
         this.root = null;
     }
 
+    public void load() {
+        insert(20);
+        insert(10);
+        insert(30);
+        insert(5);
+        insert(15);
+        insert(25);
+        insert(35);
+        insert(100);
+
+    }
+
     public void insert(int value) {
         root = insertRec(root, value);
     }
@@ -107,7 +119,7 @@ public class MyTree {
     }
 
     // 8. Test f8 - Search
-    public void f8() {
-
+    int f8(int n) {
+        return 0;
     }
 }
