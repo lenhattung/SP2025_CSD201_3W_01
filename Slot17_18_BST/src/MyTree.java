@@ -90,7 +90,7 @@ public class MyTree {
         int maxLeftLevel = maxLevel(p.left);
         int maxRightLevel = maxLevel(p.right);
 
-        return Math.max(maxLeftLevel, maxLeftLevel) + 1;
+        return Math.max(maxLeftLevel, maxRightLevel) + 1;
     }
 
     // 1. Test f1 - compute height
