@@ -116,4 +116,40 @@ public class StudentBST {
         double count = countNodes(root);
         return (count > 0) ? (sum / count) : 0;
     }
+
+    // f1 - test insert
+    public void f1() {
+        System.out.println("Students after insertion:");
+        inOrder(root);
+    }
+
+    // f2 - count students/nodes
+    public int f2() {
+        return countNodes(root);
+    }
+
+    // f3 - sum of GPAs
+    public double f3() {
+        return getAverageGPA();
+    }
+
+    // f4 - pre-order traversal
+    public void f4() {
+        preOrder(root);
+    }
+
+    // f5 - in-order traversal
+    public void f5() {
+        inOrder(root);
+    }
+
+    // f6 - post-order traversal
+    public void f6() {
+        postOrder(root);
+    }
+
+    // f7 - find student by ID
+    public Student f7(int id) {
+        return findStudentById(id);
+    }
 }
