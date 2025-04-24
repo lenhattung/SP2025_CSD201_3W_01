@@ -51,6 +51,11 @@ public class Student implements Comparable<Student>{
         //return this.id-that.id;
         return Integer.compare(this.id, that.id);
     }
+
+    @Override
+    public String toString() {
+        return this.id+"-"+this.getName()+"-"+this.id;
+    }
     
     
 }
